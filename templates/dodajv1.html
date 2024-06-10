@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dodaj aktivnost</title>
+    <link rel="icon" href="../static/volovers-favicon-color.png">
+    <style>
+        body {
+            background-image: url("/static/Novi Projekt (5).jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: repeat;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: rgb(0, 0, 0);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        nav {
+            background-color: #294474;
+            position: fixed;
+            overflow: hidden;
+            border-radius: 9px;
+            top: 0;
+            margin-top: 5px;
+            width: 99%;
+            z-index: 1000;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        nav a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 20px 22px;
+            text-decoration: none;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: lighter;
+        }
+
+        .volovers {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 20px 20px;
+            text-decoration: none;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: bolder;
+        }
+
+        nav a:hover {
+            background-color: #32538d;
+
+        }
+
+
+        .content p {
+            color: black;
+            font-size: 20px;
+        }
+
+        .container {
+            background-color: #fff;
+            color: black;
+            padding: 20px;
+            width: 450px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-top: 70px;
+        }
+
+        form {
+            text-align: left;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="datetime-local"],
+        select,
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 4px;
+            background-color: #294473;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #1565c0;
+        }
+
+        p {
+            margin-top: 15px;
+        }
+
+        a {
+            color: #1877f2;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+        </style>
+</head>
+
+<body>
+
+    <nav>
+        <div class="volovers">VOLOVERS</div>
+        <a href="{{url_for('home')}}">Početna</a>
+        <a href="{{url_for('dodaj_aktivnost')}}">Dodaj aktivnost</a>
+        <a href="{{url_for('prikazi_popis_aktivnosti')}}">Popis aktivnosti</a>
+        <a href="{{url_for('prikazi_volontere_po_aktivnosti')}}">Prikaži volontere</a>
+    </nav>
+
+    <div class="container">
+        <form action="{{ url_for('dodaj_volontera', aktivnost_ime=aktivnost_ime) }}" method="POST">
+
+            <div>
+                <label for="ime">Ime:</label>
+                <input type="text" id="ime" name="ime" placeholder="Ime"
+                    style="width: 80%;" required>
+            </div>
+            <div>
+                <label for="prezime">Prezime:</label>
+                <input type="text"id="prezime" name="prezime" placeholder="Prezime"
+                    style="width: 80%;resize: none;" required>
+            </div>
+
+            <div>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email_volontera" placeholder="Email adresa"
+                    style="width: 80%;" required>
+            </div>
+
+            <div>
+                <label for="broj">Broj telefona:</label>
+                <input type="text" id="broj" name="kontakt_broj_volontera" placeholder="Broj telefona"
+                    style="width: auto;" required>
+            </div>
+
+            <div>
+                 <label for="aktivnost">Naziv aktivnosti:</label>
+                 <input type="text" id="aktivnost" name="naziv_aktivnosti" value="{{aktivnost_ime}}" style="width: 80%;" readonly>
+            </div>
+
+            <button type="submit" style="font-weight: bold">Dodaj volontera</button>
+        </form>
+    </div>
+
+</body>
+
+</html>

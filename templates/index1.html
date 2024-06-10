@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VOLOVERS</title>
+    <link rel="icon" href="../static/volovers-favicon-color.png">
+    <style>
+        body {
+            background-image: url("static/wallpaperflare.com_wallpaper (1).jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        nav {
+            background-color: #294474;
+            position: fixed;
+            overflow: hidden;
+            border-radius: 9px;
+            top: 0;
+            margin-top: 5px;
+            width: 99%;
+            z-index: 1000;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        nav a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 20px 22px;
+            text-decoration: none;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: lighter;
+        }
+
+        .volovers {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 20px 20px;
+            text-decoration: none;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: bolder;
+        }
+
+        nav a:hover {
+            background-color: #32538d;
+
+        }
+
+        .content {
+            background-color: rgb(255, 255, 255);
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 70px;
+            width: 70%;
+        }
+
+        .content p {
+            color: black;
+            font-size: 20px;
+        }
+
+        footer {
+            background-color: #464242;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed; /* Fiksiranje na dno */
+            left: 0;
+            bottom: 0;
+            width: 100%; /* Puno širina */
+        }
+
+    </style>
+
+
+
+</head>
+
+<body>
+
+
+    <nav>
+        <div class="volovers">VOLOVERS</div>
+        <a href="{{url_for('home')}}">Početna</a>
+        <a href="{{url_for('dodaj_aktivnost')}}">Dodaj aktivnost</a>
+        <a href="{{url_for('prikazi_popis_aktivnosti')}}">Popis aktivnosti</a>
+        <a href="{{url_for('prikazi_volontere_po_aktivnosti')}}">Prikaži volontere</a>
+    </nav>
+
+
+    <div class="content" align="center">
+        <p>Dobrodošli na Volovers, vaše pristupačno web mjesto za volontere.
+            Istražite različite prilike, prilagodite svoje istraživanje i sudjelujte u projektima koji odgovaraju vašim
+            interesima i planovima.
+            Organizacijama nudimo sučelje jednostavno za korištenje za promoviranje vaših događaja i upravljanje
+            sudionicima.
+            Budite dio pozitivnih promjena u društvu uz Volovers.</p>
+    </div>
+
+     <footer class="fixed-bottom text-center py-3">
+        <p style="color: white;">Informacijski sustavi - VOLOVERS, 2024</p>
+    </footer>
+
+</body>
+
+</html>
