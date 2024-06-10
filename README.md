@@ -8,11 +8,25 @@ VOLOVERS je sustav za upravljanje volonterima i volonterskim aktivnostima. Proje
   - Dodavanje nove aktivnosti
   - Ažuriranje postojećih aktivnosti
   - Brisanje aktivnosti
-  - Dodavanje volontera
-  - pregled dostupnih aktivnosti
+  - Dodavanje volontera u bazu
 - **Volonteri**:
   - Pregled dostupnih aktivnosti
   - Prijava na odabrane aktivnosti
 
 ## Kako pokrenuti aplikaciju lokalno
 
+### Korištenjem Docker-a
+
+1. **Klonirajte repozitorij**:
+   ```bash
+   cd ~/Downloads
+   git clone https://github.com/NikaAK47/Booker
+   cd booker
+
+2. **Izgradite Docker sliku**:
+   ```bash
+   docker build -t booker .
+
+3. **Pokrenite Docker kontejner**:
+  ```bash
+  docker run -p 8080:8080booker
