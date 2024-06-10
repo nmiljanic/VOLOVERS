@@ -20,13 +20,13 @@ VOLOVERS je sustav za upravljanje volonterima i volonterskim aktivnostima. Proje
 1. **Klonirajte repozitorij**:
    ```bash
    cd ~/Downloads
-   git clone https://github.com/NikaAK47/Booker
-   cd booker
+   git clone https://github.com/nmiljanic/VOLOVERS
+   cd volovers
 
 2. **Izgradite Docker sliku**:
    ```bash
-   docker build -t booker .
+   docker build -t volovers .
 
 3. **Pokrenite Docker kontejner**:
   ```bash
-  docker run -p 8080:8080booker
+  docker run -p 8080:8080 volovers
