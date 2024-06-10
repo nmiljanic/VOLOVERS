@@ -8,7 +8,8 @@ VOLOVERS je sustav za upravljanje volonterima i volonterskim aktivnostima. Proje
   - Dodavanje nove aktivnosti
   - Ažuriranje postojećih aktivnosti
   - Brisanje aktivnosti
-  - Dodavanje volontera u bazu
+  - Dodavanje volontera
+  - pregled dostupnih aktivnosti
 - **Volonteri**:
   - Pregled dostupnih aktivnosti
   - Prijava na odabrane aktivnosti
